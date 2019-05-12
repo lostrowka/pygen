@@ -3,8 +3,8 @@
 # Form implementation generated from reading ui file 'main.ui',
 # licensing of 'main.ui' applies.
 #
-# Created: Sun May 12 11:54:45 2019
-#      by: pyside2-uic  running on PySide2 5.12.1
+# Created: Sun May 12 13:55:17 2019
+#      by: pyside2-uic  running on PySide2 5.12.3
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -98,10 +98,16 @@ class Ui_Main(object):
 
     def retranslateUi(self, Main):
         Main.setWindowTitle(QtWidgets.QApplication.translate("Main", "PyGen", None, -1))
-        self.label_5.setText(QtWidgets.QApplication.translate("Main", "Interval", None, -1))
+        self.leDestPort.setText(QtWidgets.QApplication.translate("Main", "0", None, -1))
+        self.leDestPort.setPlaceholderText(QtWidgets.QApplication.translate("Main", "0", None, -1))
+        self.leInterval.setText(QtWidgets.QApplication.translate("Main", "1000", None, -1))
+        self.leInterval.setPlaceholderText(QtWidgets.QApplication.translate("Main", "1000", None, -1))
+        self.label_5.setText(QtWidgets.QApplication.translate("Main", "Interval [ms]", None, -1))
         self.label_4.setText(QtWidgets.QApplication.translate("Main", "Data message", None, -1))
         self.pbAddConn.setText(QtWidgets.QApplication.translate("Main", "Create Generator Task", None, -1))
         self.label_2.setText(QtWidgets.QApplication.translate("Main", "Destination address", None, -1))
         self.label_3.setText(QtWidgets.QApplication.translate("Main", "Destination port", None, -1))
         self.label.setText(QtWidgets.QApplication.translate("Main", "Protocol", None, -1))
+        self.leDestAddress.setText(QtWidgets.QApplication.translate("Main", "127.0.0.1", None, -1))
+        self.leDestAddress.setPlaceholderText(QtWidgets.QApplication.translate("Main", "127.0.0.1", None, -1))
 
