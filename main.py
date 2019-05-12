@@ -3,7 +3,7 @@
 # Form implementation generated from reading ui file 'main.ui',
 # licensing of 'main.ui' applies.
 #
-# Created: Thu May  9 22:26:52 2019
+# Created: Sun May 12 11:54:45 2019
 #      by: pyside2-uic  running on PySide2 5.12.1
 #
 # WARNING! All changes made in this file will be lost!
@@ -89,6 +89,12 @@ class Ui_Main(object):
 
         self.retranslateUi(Main)
         QtCore.QMetaObject.connectSlotsByName(Main)
+        Main.setTabOrder(self.cbProtocols, self.leDestAddress)
+        Main.setTabOrder(self.leDestAddress, self.leDestPort)
+        Main.setTabOrder(self.leDestPort, self.teMessage)
+        Main.setTabOrder(self.teMessage, self.leInterval)
+        Main.setTabOrder(self.leInterval, self.pbAddConn)
+        Main.setTabOrder(self.pbAddConn, self.pktFlowView)
 
     def retranslateUi(self, Main):
         Main.setWindowTitle(QtWidgets.QApplication.translate("Main", "PyGen", None, -1))

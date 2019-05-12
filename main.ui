@@ -151,6 +151,15 @@
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
  </widget>
+ <tabstops>
+  <tabstop>cbProtocols</tabstop>
+  <tabstop>leDestAddress</tabstop>
+  <tabstop>leDestPort</tabstop>
+  <tabstop>teMessage</tabstop>
+  <tabstop>leInterval</tabstop>
+  <tabstop>pbAddConn</tabstop>
+  <tabstop>pktFlowView</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>
