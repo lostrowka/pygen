@@ -14,5 +14,3 @@ if __name__ == '__main__':
     gui.show()
 
     app.exec_()
-
-    # TODO: close all threads on app exit

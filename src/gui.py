@@ -24,6 +24,7 @@ class PyGenMainUi(QMainWindow):
         self.listWidget = self.ui.pktFlowView
         self.message = self.ui.teMessage
         self.interval = self.ui.leInterval
+        self.listItems = []
 
         self.render_view()
 
@@ -39,8 +40,15 @@ class PyGenMainUi(QMainWindow):
         self.listWidget.addItem(listWidgetItem)
         pktFlow = PktFlow(self.destAddress.text(), self.destPort.text(), self.cbProtocols.currentText(), self.message.toPlainText(), self.interval.text())
         listItem = ListItem(listWidgetItem, self.listWidget, pktFlow)
+        self.listItems.append(listItem)
         listWidgetItem.setSizeHint(listItem.sizeHint())
         self.listWidget.setItemWidget(listWidgetItem, listItem)
+
+    def closeEvent(self, event):
+        for item in self.listItems:
+            item.pktFlow.keep_running = False
+            item.pktFlow.exit_thread = True
+        event.accept()
 
 
 class ListItem(QWidget):
@@ -76,6 +84,7 @@ class ListItem(QWidget):
         pass
 
     def remove_item(self):
+        self.pktFlow.keep_running = False
         self.pktFlow.exit_thread = True
         self.listWidgetItem.setSizeHint(QSize(0,0))
         self.parentList.removeItemWidget(self.listWidgetItem)
