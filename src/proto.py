@@ -1,5 +1,3 @@
-""""""
-
 import socket
 import struct
 from abc import ABC, abstractmethod
